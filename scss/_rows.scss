@@ -1,0 +1,23 @@
+.card-style {
+  height: 100%;
+  color: $white;
+  background-color: $background-secondary;
+  h6 { 
+    color: $secondary
+  }
+}
+
+.title {
+  &-white {
+    color: $white;
+  }
+  &-primary {
+    color: $primary;
+  }
+
+  &-secondary {
+    color: $secondary;
+  }
+
+}
+

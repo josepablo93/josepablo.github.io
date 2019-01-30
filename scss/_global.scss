@@ -1,0 +1,153 @@
+// Global styling for this template
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @include serif-font;
+}
+
+hr {
+  max-width: 100px;
+  border-width: 3px;
+  border-color: $primary;
+  &.style-primary {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    text-align: center;
+    color: $primary
+  }
+  &.style-primary:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1em;
+    padding: 0 0.25em;
+    background: $white;
+  }
+  
+  &.style-secondary {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    text-align: center;
+    color: $secondary
+  }
+  &.style-secondary:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1em;
+    padding: 0 0.25em;
+    background: $background-main;
+  }
+
+  &.style-third {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double $secondary;
+    text-align: center;
+    color: $secondary
+  }
+  &.style-third:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1em;
+    padding: 0 0.25em;
+    background: $gray-900;
+  }
+
+  &.style-forth {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double $black;
+    text-align: center;
+    color: $black
+  }
+  &.style-forth:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1em;
+    padding: 0 0.25em;
+    background: $white;
+  }
+
+
+}
+
+hr.light {
+  border-color: $secondary;
+  color: $secondary;
+}
+
+a {
+  color: $primary;
+  @include transition-all;
+  &:hover {
+    color: darken($primary, .1);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include sans-serif-font;
+}
+
+.bg-primary {
+  background-color: $background-main !important;
+}
+
+.bg-dark {
+  background-color: $gray-900 !important;
+}
+
+.text-faded {
+  color: fade-out($white, .3);
+}
+
+section {
+  padding: 8rem 0;
+}
+
+.section-heading {
+  margin-top: 0;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $gray-900;
+  text-shadow: none;
+}
+
+::selection {
+  color: $white;
+  background: $gray-900;
+  text-shadow: none;
+}
+
+img::selection {
+  color: $white;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: $white;
+  background: transparent;
+}
